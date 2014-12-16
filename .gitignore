@@ -1,0 +1,5 @@
+*.sw?
+.bundle
+secret*
+bin
+vendor
