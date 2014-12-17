@@ -3,19 +3,11 @@ namespace :lab3_1 do
   TOPIC_NAME = 'ClassroomEvent'
 
   def sns_resource
-    @sns_resource ||= Aws::SNS::Resource.new client: sns_client
-  end
-
-  def sns_client
-    @sns_client ||= Aws::SNS::Client.new
+    @sns_resource ||= Aws::SNS::Resource.new
   end
 
   def sqs_resource
-    @sqs_resource ||= Aws::SQS::Resource.new client: sqs_client
-  end
-
-  def sqs_client
-    @sqs_client ||= Aws::SQS::Client.new
+    @sqs_resource ||= Aws::SQS::Resource.new
   end
 
   def queue
