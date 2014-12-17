@@ -2,7 +2,7 @@ namespace :lab2_1 do
   BUCKET_NAME = "lab2.1-#{Date.today.to_s}"
 
   def resource
-    @resource ||= Aws::S3::Resource.new
+    @resource ||= Aws::S3::Resource.new client: client
   end
 
   def client

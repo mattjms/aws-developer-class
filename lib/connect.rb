@@ -13,5 +13,5 @@ task :connect do
 end
 
 def log msg
-  puts '-'*10 + "> #{msg}"
+  puts '-'*3 + "> #{msg}"
 end
