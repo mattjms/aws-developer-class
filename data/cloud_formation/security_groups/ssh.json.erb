@@ -1,0 +1,51 @@
+{
+  "SSHSecurityGroup" : {
+    "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+       "VpcId" : "vpc-a9272ccb",
+       "GroupDescription" : "allows SSH access from anywhere",
+       "SecurityGroupIngress" : [
+           {
+              "IpProtocol" : "tcp",
+              "FromPort" : "22",
+              "ToPort" : "22",
+              "CidrIp" : "0.0.0.0/0"
+           },
+           {
+              "IpProtocol" : "tcp",
+              "FromPort" : "80",
+              "ToPort" : "80",
+              "CidrIp" : "0.0.0.0/0"
+           }
+       ],
+      "SecurityGroupEgress" : [
+        {
+          "IpPermissions": [{
+              "IpProtocol" : "tcp",
+              "FromPort" : "22",
+              "ToPort" : "22",
+              "IpRanges" : [
+                {
+                  "CidrIp" : "0.0.0.0/0"
+                }
+              ]
+          }]
+        }
+      ],
+      "RevokeEgress" : [
+        {
+          "IpPermissions": [{
+              "IpProtocol" : "-1",
+              "FromPort" : "-1",
+              "ToPort" : "-1",
+              "IpRanges" : [
+                {
+                  "CidrIp" : "0.0.0.0/0"
+                }
+              ]
+          }]
+        }
+      ]
+   }
+  }
+}
