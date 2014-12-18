@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    ImageResize (0.0.5)
     aws-sdk (2.0.14.pre)
       aws-sdk-resources (= 2.0.14.pre)
     aws-sdk-core (2.0.14)
@@ -21,5 +22,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  ImageResize
   aws-sdk (~> 2.0.14.beta)
   rake
